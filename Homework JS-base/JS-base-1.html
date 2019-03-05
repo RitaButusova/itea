@@ -1,0 +1,28 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Метод prompt</title>
+    <script>
+    document.write("D = b <sup>2</sup> - 4 * a * c = ");
+    var b = +prompt("Write b");
+    var a = +prompt("Write a");
+    var c = +prompt("Write c");
+    var d = b^2 - 4 * a * c;
+    if (d < 0){
+       d = 0; 
+    }
+    document.write(d);
+
+    document.write("</br> x <sub>1</sub> = - b + &#8730 D / 2a = ");
+    var x1 = - b + Math.sqrt(d)/2*a;
+    document.write(x1);
+    document.write("</br> x <sub>2</sub> = b + &#8730 D / 2a = ");
+    var x2 = b + Math.sqrt(d)/2*a;
+    document.write(x2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

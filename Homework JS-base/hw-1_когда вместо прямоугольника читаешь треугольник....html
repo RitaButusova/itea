@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Треугольник</title>
+	<style type="text/css">
+		#triangle{
+  width: 0; 
+  height: 0;
+  border-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: green;
+}
+	</style>
+</head>
+<body>
+	<div id="triangle"></div>
+	<script type="text/javascript">
+		var height_triangle = +prompt("Введите высоту треугольника");
+		var transparent_triangle = height_triangle / 2;
+		transparent_triangle *= 38;
+		var pixel_transparent_triangle = transparent_triangle + "px";
+		var weight_triangle = +prompt("Введите ширину треугольника");
+		weight_triangle *= 38;
+		var pixel_weight_triangle = weight_triangle + "px"
+		
+		document.getElementById("triangle").style.borderBottomWidth = pixel_weight_triangle; 
+		document.getElementById("triangle").style.borderWidth = pixel_transparent_triangle; 
+	</script>
+</body>
+</html>

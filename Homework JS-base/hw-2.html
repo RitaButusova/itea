@@ -1,0 +1,55 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>hw-2</title>
+    <script>
+        //Уравнение прямой
+     var x1, y1, x2, y2, k, b;
+     x1 = +prompt("Введите первую координату точки А x1");
+     y1 = +prompt("Введите вторую координату точки А y1");
+     document.write('Точка А (' + x1 + ' ; ' + y1 + ') </br>');
+     x2 = +prompt("Введите первую координату точки B x2");
+     y2 = +prompt("Введите уторую координату точки B y2");
+     document.write('Точка B (' + x2 + ' ; ' + y2 + ') </br> Уравнение прямой, проходящей через эти точки: ');
+     k = (y1 - y2) / (x1 - x2);
+     b = y2 - k * x2;
+     document.write('y = ' + k.toFixed(2) + 'x + ' + b.toFixed(2) + '</br>');
+
+        //Обменять значения двух переменных, используя третью (буферную) переменную
+        document.write('Обменять значения двух переменных, используя третью (буферную) переменную (a = 2, b = 3): ');
+     var a, b, c;
+     a = 2;
+     b = c = 3;
+     b = a;
+     a = c;
+     document.write('a = ' + a + '; b = ' + b + '<br>')
+
+        //Получить от пользователя данные о пользователе: имя, фамилию, возраст. Обработать их и вывести на экран.
+    var firstNam, lastName, age;
+    firstName = prompt('Введите ваше имя');
+    lastName = prompt('Введите вашу фамилию');
+    age = +prompt('Введите ваш возраст');  
+    document.write('Имя: ' + firstName + '<br>' + 'Фамилия: ' + lastName + '<br>' + 'Возраст: ' + age); 
+
+        /*Запросите у пользователя его возраст, после чего выведите на экран модальное окно с вопросом: "Ваш возраст
+         ...(введеное пользователем число) лет?". Далее в зависимости от выбора пользователя выводится модальное окно 
+         с информацией true или false.*/
+    var question = confirm('Ваш возраст ' + age + ' лет?');
+    document.write('<br>' + question);
+
+        //Запросите у пользователя возраст и если пользователю 18 лет или больше выведите квадрать иначе прямоугольник
+    age_majority = +prompt('Введите ваш возраст');   
+    if (age_majority >= 18){
+        document.write('<div style = "width: 100px; height: 100px; border: 2px solid blue;"></div>');
+    } else{
+        document.write('<div style = "width: 50px; height: 100px; border: 2px solid blue;"></div>');
+    }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
