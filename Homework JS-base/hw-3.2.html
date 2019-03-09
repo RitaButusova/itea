@@ -1,0 +1,23 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Факториал</title>
+    <script>
+    var factorial = +prompt('Введите число для вычисления факториала');    
+    while (0 > factorial || factorial > 10){
+        factorial = +prompt('Введите число от 0 до 10');
+    } 
+    if(1 <= factorial || factorial <= 10){
+    var result = 1;
+        for(i = factorial; i >= 1; i--){
+            result = result * i;
+        }
+    document.write(result);
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
