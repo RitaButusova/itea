@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>4.4</title>
+    <script>
+    var array = [];
+    var length = +prompt("Write length array");
+    array.length = length;
+    for (var i = 0; i < length; i++){
+        array[i] = +prompt("Write number at index");
+    }
+    for(i = 0; i < length-1; i++){
+        for(j = 0; j < length-1-i; j++){
+            if(array[j] > array[j+1]){
+                var c = array[j];
+                array[j] = array[j+1];
+                array[j+1] = c;
+            }
+        }
+    }
+        document.write(array);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
