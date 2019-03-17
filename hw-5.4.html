@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>hw-5.4</title>
+    <script>
+    var arr1 = ["\"Шахтер\"", "Chevrolet Spark", "Донецк"];
+    var arr2 = [": 100500 игроков; </br>", ": 1.0 см<sup>3</sup>; </br>", ": 950000 жителей. </br>"];
+
+    var arr = arr1.concat(arr2);
+     
+    arr[1] = [arr[3], arr[3] = arr[1]][0];
+    arr[2] = [arr[3], arr[3] = arr[2]][0];
+    arr[3] = [arr[4], arr[4] = arr[3]][0];
+
+    arr = arr.join(" ");
+    document.write(arr);
+
+   
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
