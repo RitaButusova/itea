@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>hw-5.2</title>
+    <script>
+        var index_elem = +prompt("Введите значение, после которого вставить элемент");
+        var array = ["pineapple", "cucumber", "orange", "tomato"];
+        var GetElements = (arr, i) => {
+            arr.splice(i, 0, "apple");
+            console.log(arr);
+        }
+        GetElements(array, index_elem);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
