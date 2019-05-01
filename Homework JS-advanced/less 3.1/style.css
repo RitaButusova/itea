@@ -1,0 +1,39 @@
+.container{
+    width: 450px;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid lightgray;
+    padding-bottom: 20px;
+    border-radius: 4px;
+}
+
+h2{
+    font-size: 24px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+   
+  ion-icon {
+    background: lightblue;
+    color: dodgerblue;
+    min-width: 50px;
+    min-height: 38px;
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+  }
+
+  button{
+    display: block;
+    float: right;
+  }
+
+  a{
+      color: blue;
+  }
