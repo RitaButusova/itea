@@ -1,0 +1,90 @@
+#ident1 {
+    width: auto;
+    height: 140px;
+    border-bottom: 2px dashed green;
+  }
+  #ident1 .div1{
+    width: 1400px;
+    height: 120px;
+    position:absolute;
+    margin-top: 20px;
+  }
+  #ident1 .lable{
+    float: left;
+    clear: both;
+  }
+  #ident1 .menu{
+   width: 563px;
+   height: 69px;
+   padding-top: 20px;
+   float: right;
+   text-align: bottom;
+  }
+  #ident1 .li  {
+    display: inline-block;
+    border: 0px solid silver;
+    width: 70px;
+    height: 20px;
+    padding-bottom: 50px;
+    margin-left: 10px;
+  }
+  #ident1 a{
+    font-size:15px;
+    color:black;
+    text-decoration:none;
+  }
+  #ident1 .li:hover{
+    border-bottom: 5px solid yellow;
+  }
+  #ident1 .li:last-child:hover{
+    padding-bottom: 65px;
+    background-color: yellow;
+  }
+  #ident1 .a{
+    font-size: 14px;
+    color:black;
+    text-decoration:none;
+  }
+
+
+.product-box{
+    margin: 50px 20px;
+    padding-top: 50px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.product-box a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+  }
+
+  .product-box a:hover{
+    background-color: yellow;
+  }
+
+.product-box img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+.product-caption{
+    text-align: center;
+}
+
+.view-cart{
+    margin-top: 100px;
+}
+
+tr{
+    border-top: 1px solid lightgrey;
+}
+
+.cross{
+    margin-left: 80px;
+}
+
