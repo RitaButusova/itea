@@ -54,7 +54,22 @@ class Table{
         tB.insertBefore(trElem, last);
     }
 
-}  
+    myFunction(){
+        var listPrice = document.querySelectorAll('.total-price');
+        var arrPrice = [].slice.call(listPrice);
+        var totalSumm = 0;
+        for(i = 0; i < arrPrice.length; i++){
+            var valArr = arrPrice[i].innerHTML;
+            totalSumm += +(valArr.slice(1));
+            
+        }
+        console.log(totalSumm);
+        var total = document.getElementById('total');
+        total.innerHTML = totalSumm;
+}
+}
+
+
 
 
 var products = document.querySelectorAll('.product-box');
@@ -79,7 +94,7 @@ category.addEventListener('click', function(event) {
         var table = document.querySelector('table');
         var newElTable = new Table(table, imgSrc, nameTitle, price);
         newElTable.AddGoods();
-
+        
         var inpVal = document.querySelectorAll(".quantity");
         for(i = 0; i < inpVal.length; i++){
             inpVal[i].addEventListener('change', function(event) {
@@ -88,9 +103,11 @@ category.addEventListener('click', function(event) {
                 var totalPrice = quant * (+price);
                 var divTotalPrice = this.parentNode.parentNode.cells[4];
                 divTotalPrice.innerHTML = "$" + totalPrice;
+                newElTable.myFunction();
             });
         }
           
+       
+          
 });
-
-        
+    
