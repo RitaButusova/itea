@@ -54,7 +54,7 @@ class Table{
         tB.insertBefore(trElem, last);
     }
 
-    myFunction(){
+    SummPrice(){
         var listPrice = document.querySelectorAll('.total-price');
         var arrPrice = [].slice.call(listPrice);
         var totalSumm = 0;
@@ -63,13 +63,11 @@ class Table{
             totalSumm += +(valArr.slice(1));
             
         }
-        console.log(totalSumm);
         var total = document.getElementById('total');
         total.innerHTML = totalSumm;
 }
+
 }
-
-
 
 
 var products = document.querySelectorAll('.product-box');
@@ -103,8 +101,20 @@ category.addEventListener('click', function(event) {
                 var totalPrice = quant * (+price);
                 var divTotalPrice = this.parentNode.parentNode.cells[4];
                 divTotalPrice.innerHTML = "$" + totalPrice;
-                newElTable.myFunction();
+                newElTable.SummPrice();
             });
+        }
+
+        var deleteVal = document.querySelectorAll('.cross');
+        for(i = 0; i < deleteVal.length; i++){
+            deleteVal[i].addEventListener('click', function(event) {
+                var target = event.target;
+                var divDel = this.parentNode.parentNode;
+                console.log(divDel);
+                divDel.remove();
+                newElTable.SummPrice();
+            });
+
         }
           
        
