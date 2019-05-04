@@ -1,7 +1,39 @@
-class Goods{
-    constructor(categories){
-        this.categories = categories;
-    }
+class Fruit{
+    constructor(id, img, title, name, price){
+        this.id = id;
+        this.img = img,
+        this.title = title;
+		this.name = name,
+		this.price = price
+	}
+}
+
+var fruits = [
+	new Fruit('tomato', 'img/1.png', 'tomato', 'Tomato', '$50.00' ),
+	new Fruit('cabbage', 'img/2.png', 'cabbage', 'Cabbage', '$50.00'),
+	new Fruit('cherry', 'img/3.png', 'cherry', 'Cherry', '$50.00'),
+	new Fruit('salad', 'img/4.png', 'salad', 'Salad', '$50.00'),
+	new Fruit('pinapple', 'img/5.png', 'pinapple', 'Pinapple', '$50.00'),
+	new Fruit('onion', 'img/6.png', 'onion', 'Onion', '$50.00'),
+	new Fruit('mushroom', 'img/7.png', 'mushroom', 'Mushroom', '$50.00'),
+	new Fruit('pepper', 'img/8.png', 'pepper', 'Pepper', '$50.00')
+];
+
+for(fruit of fruits){
+	document.getElementById("category").innerHTML += `<div class="col-lg-3 col-md-4 col-sm-6" id="${fruit.id}"> 
+    <div class="product-box">
+        <img class="prod-img" alt="" src="${fruit.img}" title="${fruit.title}"/>
+        <a href="#" class="icon"><img src="img/hand.png" width="30px" height="30px"/></a>
+    </div>                                           
+    <div class="product-caption"> 
+        <h3 class="product-title">
+            <a href="#"> <span class="light-font"> organic </span>  <strong class = 'name-title'>${fruit.name}</strong></a>
+        </h3>
+        <div class="price"> 
+        <strong class="clr-txt">${fruit.price}</strong>
+        </div>
+    </div>
+    </div>`
 }
 
 class Table{
@@ -70,21 +102,17 @@ class Table{
 }
 
 
-var products = document.querySelectorAll('.product-box');
-var product = [];
-for (i = 0; i < products.length; i++){
-    product[i] = new Goods(products[i]);
-}
 
 var category = document.getElementById('category');
 
 
 category.addEventListener('click', function(event) {
-	var target = event.target;
+    var target = event.target;
         var imgSrc = target.src.slice(-9);
         var valId = target.title;
         var elClick = document.getElementById(valId);
         var nameTitle = elClick.querySelector('.name-title');
+        
         var nameTitle = nameTitle.innerHTML;
         var price = elClick.querySelector('.clr-txt');
         var price = price.innerHTML;
@@ -107,10 +135,8 @@ category.addEventListener('click', function(event) {
 
         var deleteVal = document.querySelectorAll('.cross');
         for(i = 0; i < deleteVal.length; i++){
-            deleteVal[i].addEventListener('click', function(event) {
-                var target = event.target;
+            deleteVal[i].addEventListener('click', function() {
                 var divDel = this.parentNode.parentNode;
-                console.log(divDel);
                 divDel.remove();
                 newElTable.SummPrice();
             });
